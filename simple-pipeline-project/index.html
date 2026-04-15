@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Form Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f4f4f4;
+    }
+    form {
+      background: white;
+      padding: 24px;
+      border-radius: 8px;
+      max-width: 400px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 { font-size: 1.4rem; margin-bottom: 16px; }
+    label { display: block; margin-bottom: 4px; font-weight: bold; }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 4px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .error { color: red; font-size: 0.85rem; margin-bottom: 12px; }
+    .input-error { border: 2px solid red; }
+    button {
+      background: #01696f;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover { background: #0c4e54; }
+    .success { color: green; font-weight: bold; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <form id="myForm">
+    <h1>Simple Form Checker</h1>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Your name">
+    <div id="name-error" class="error"></div>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" placeholder="your@email.com">
+    <div id="email-error" class="error"></div>
+
+    <button type="submit">Send</button>
+    <div id="success-msg" class="success"></div>
+  </form>
+
+  <script src="validate.js"></script>
+</body>
+</html>

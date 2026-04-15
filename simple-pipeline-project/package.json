@@ -1,0 +1,14 @@
+{
+  "name": "simple-pipeline-project",
+  "version": "1.0.0",
+  "description": "Simple HTML page with ESLint and HTMLHint pipeline",
+  "scripts": {
+    "lint:js": "eslint validate.js",
+    "lint:html": "htmlhint index.html",
+    "lint": "npm run lint:html && npm run lint:js"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "htmlhint": "^1.1.4"
+  }
+}
